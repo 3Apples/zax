@@ -1,0 +1,7 @@
+include header
+
+body
+	.container
+		h2 #{user.id}, #{user.auth_via}, #{user.name}
+		form(action="/vc-admin/auth/logout")
+			input(type="submit", value="Logout")

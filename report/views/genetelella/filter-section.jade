@@ -1,0 +1,19 @@
+div
+    h4 Filter By
+
+form.form-inline.outline(role="form")
+  .form-group.col-md-12
+    .row
+      .col-md-2
+          #from-date.input-append.date.form_datetime
+            input(size="16", type="text", placeholder="From date", readonly, style="height:initial; margin-right: 8px")
+            span.add-on
+              i.fa.fa-calendar
+      .col-md-2
+          #to-date.input-append.date.form_datetime
+            input(size="16", type="text", placeholder="To date", readonly, style="height:initial; margin-right: 8px")
+            span.add-on
+              i.fa.fa-calendar
+      .col-md-7
+      .col-md-1
+        button#filter-btn.btn.btn-danger.btn-sm.btn-block(href="javascript:void(0)") Go!

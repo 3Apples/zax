@@ -1,0 +1,73 @@
+extends layout.jade
+
+block styles
+
+block main
+  .row
+    .col-md-12.col-sm-4.col-xs-12
+      .x_panel.tile
+        .x_title
+          h2 Create Class
+          ul.nav.navbar-right.panel_toolbox
+            li
+              a.collapse-link
+                i.fa.fa-chevron-up
+          .clearfix
+        .x_content
+          h4  Parameters
+          .widget_summary
+            .w_center(style="width:100%")
+
+              form.form-horizontal(role="form")
+                .form-group
+                  label.control-label.col-md-2(for="ctitle") Title 
+                  .col-md-10
+                    input#ctitle.form-control(type="input", placeholder="Class Title")
+
+                .form-group
+                  label.control-label.col-md-2 Scheduled Time
+                  .col-md-2.sched-time-col
+                    #sched-time.input-append.date.form_datetime
+                      input(size="16", type="text", value="Schedule Time", readonly, style="height:initial")
+                      span.add-on
+                        i.fa.fa-calendar
+                  .col-md-8
+                    button#sched-now.btn.btn-sm(href="javascript:void(0)")
+                      span.fa.fa-bolt(style="margin-right:8px")
+                      span Or Schedule Right Now
+
+                .form-group
+                  label.control-label.col-md-2 Duration (in minutes)
+                  .col-md-10
+                    input#duration.form-control(type="number", placeholder="Duration", style="height:initial")
+
+                .form-group
+                  label.control-label.col-md-2 Profile Name
+                  .col-md-10
+                    input#profile.form-control(type="input", value="default", readonly, style="height:initial")
+
+                .form-group
+                  label.control-label.col-md-2 Presenter
+                  .col-md-10
+                    input#presenter.form-control(type="input", placeholder="presenter=id/auth-via", style="height:initial")
+
+          .widget_summary
+              .row
+                .col-md-12
+                  button.btn.btn-danger.btn-lg#submit तथास्तु  
+                  span &nbsp
+                  span.fa.fa-spinner.fa-spin.fa-2x#loading(style="display:none")
+            .clearfix
+
+          .widget_summary
+            #ok(style='display:none')
+              h4 Class created with id ==> &nbsp
+                span#class-id.text-success
+            #error(style='display:none')
+              span.text-danger Error : &nbsp
+              span.text-danger#err-msg
+            .clearfix
+  br
+
+block scripts
+  script(src='/vc-admin/gene/dist/class-create-bundle.js' type='text/javascript')

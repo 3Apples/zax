@@ -1,0 +1,64 @@
+doctype html
+html(lang='en')
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    link(rel='icon', href='images/favicon.ico', type='image/ico')
+    title 3Apples Ahoy !
+
+    link(type="text/css", rel="stylesheet", href="/vc-admin/gene/vendors/bootstrap/dist/css/bootstrap.min.css")
+    link(type="text/css", rel="stylesheet", href="/vc-admin/gene/vendors/bootstrap/dist/css/bootstrap-theme.min.css")
+    link(type="text/css", rel="stylesheet", href="/vc-admin/gene/vendors/font-awesome/css/font-awesome.min.css")
+    link(type="text/css", rel="stylesheet", href="/vc-admin/gene/dist/css/commons.css")
+    link(type="text/css", rel="stylesheet", href="/vc-admin/gene/dist/css/class-list.css")
+    link(type="text/css", rel="stylesheet", href="/vc-admin/gene/build/css/less/main.min.css")
+
+  body.nav-md
+    .container.body
+      .main_container
+        .col-md-3.left_col
+          .left_col.scroll-view
+            include profile
+            include side-menu
+        include top-menu
+        .right_col(role='main')
+          //include top-tiles
+
+          //
+          // Sections
+          //
+
+          if main == 'class-list'
+            include class-list
+          else if main == 'create-class'
+            include create-class
+          else if main == 'user-list'
+            include user/list
+          else if main == 'license-template-list'
+            include license/template
+          else if main == 'license-instance-list'
+            include license/instance
+          else if main == 'org-list'
+            include org/list
+
+        footer
+          .pull-right
+            | 3Apples
+          .clearfix
+
+    script(src='/vc-admin/gene/dist/commons-bundle.js')
+
+    if main == 'class-list'
+      script(src='/vc-admin/gene/dist/class-list-bundle.js' type='text/javascript')
+    else if main == 'create-class'
+      script(src='/vc-admin/gene/dist/class-create-bundle.js' type='text/javascript')
+    else if main == 'user-list'
+      script(src='/vc-admin/gene/dist/user-bundle.js' type='text/javascript')
+    else if main == 'license-template-list'
+      script(src='/vc-admin/gene/dist/license-template-bundle.js' type='text/javascript')
+    else if main == 'license-instance-list'
+      script(src='/vc-admin/gene/dist/license-instance-bundle.js' type='text/javascript')
+    else if main == 'org-list'
+      script(src='/vc-admin/gene/dist/org-bundle.js' type='text/javascript')

@@ -1,0 +1,60 @@
+@import '../less/variables.less';
+
+.newly-created {
+	animation-name : highlight;
+	animation-duration : 4s;
+}
+
+@keyframes highlight {
+    from {background-color: fadeOut(@brand-warning, 50%);}
+    to {background-color: white;}
+}
+
+/*
+ * Class list table specific code
+ */
+
+.rt-th {
+	text-align : left;
+}
+
+.rt-td .status {
+	text-align: center;
+	border-radius: 2px;
+}
+
+
+.status-mysterious-death,
+.status-launch_failed,
+.status-failed,
+.status-mysterious-death,
+.status-launch_failed,
+.status-failed {
+	.status {
+		color : white;
+		background-color : @brand-danger;
+	}
+}
+
+.status-removed {
+	text-decoration : line-through;
+}
+
+.status-scheduled,
+.status-created,
+.status-scheduled .rt-td:nth-child(3),
+.status-created .rt-td:nth-child(3),
+.status-scheduled a,
+.status-created a,
+.status-scheduled td:nth-child(3),
+.status-created td:nth-child(3) {
+	color : @brand-info
+}
+
+.status-running {
+	.status {
+		color : white;
+		background-color : @brand-success;
+	}
+}
+

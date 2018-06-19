@@ -1,0 +1,28 @@
+@import 'app/less/variables.less';
+
+.perm-group {
+	border : 1px solid @input-border;
+	border-radius : 4px;
+	padding : 0 @grid-gutter-width/2;
+	padding-bottom : @grid-gutter-width/2;
+	margin-bottom : @grid-gutter-width/2;
+
+	& h4 {
+		font-weight : 200;
+		font-size   : 22px;
+	}
+}
+
+.perm-line {
+	padding: @grid-gutter-width/2;
+	border-top: 4px solid white;
+	background-color: fadeOut(black, 95%);
+
+	& > label {
+		width : 100px;
+	}
+}
+
+.pretty {
+	min-width : 50px;
+}

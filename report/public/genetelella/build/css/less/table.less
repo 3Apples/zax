@@ -1,0 +1,116 @@
+@import './variables.less';
+
+table {
+	table-layout : fixed;
+}
+
+table td {
+	overflow        : hidden;
+	text-overflow   : ellipsis;
+	white-space     : nowrap;
+}
+
+table td a {
+	text-decoration : underline;
+}
+table td a:hover {
+}
+
+th.sorting_asc,
+th.sorting_desc {
+	background-color : rgba(115, 135, 156, .2);
+	color : #1ABB9C;
+}
+
+th.sorting:hover,
+th.sorting_asc:hover,
+th.sorting_desc:hover {
+	cursor : pointer;
+}
+
+tr.newly-created {
+	animation-name : highlight;
+	animation-duration : 4s;
+}
+
+@keyframes highlight {
+    from {background-color: fadeOut(@brand-warning, 50%);}
+    to {background-color: white;}
+}
+
+/*
+ * Class list table specific code
+ */
+
+td.status-mysterious-death,
+td.status-launch_failed,
+td.status-failed,
+tr.status-mysterious-death,
+tr.status-launch_failed,
+tr.status-failed {
+	& td, & td a {
+		color : @brand-danger;
+	}
+
+	& td:nth-child(3) {
+		color : white;
+		background-color : fadeOut(@brand-danger, 20%);
+	}
+}
+
+td.status-removed,
+tr.status-removed td {
+	text-decoration : line-through;
+}
+
+td.status-scheduled,
+td.status-created,
+tr.status-scheduled td:nth-child(3),
+tr.status-created td:nth-child(3) {
+	color : white;
+	background-color : fadeOut(@brand-info, 20%);
+}
+
+td.status-basic-starting,
+tr.status-basic-starting td:nth-child(3){
+	color : white;
+	background-color : fadeOut(@brand-warning, 20%);
+}
+
+td.status-basic-provisioning,
+tr.status-basic-provisioning td:nth-child(3),
+td.status-advanced-provisioning,
+tr.status-advanced-provisioning td:nth-child(3) {
+	color : white;
+	background-color : fadeOut(@brand-warning, 40%);
+}
+
+td.status-running,
+tr.status-running td:nth-child(3),
+td.status-started,
+tr.status-started td:nth-child(3) {
+	color : white;
+	background-color : fadeOut(@brand-success, 20%);
+}
+
+table#table-class-details {
+	& tr > td {
+		text-align : left;
+	}
+
+	& tr > td:nth-child(1),
+	& tr > td:nth-child(3) {
+		width : 15%;
+		text-align : right;
+	}
+
+	& tr > td:nth-child(2),
+	& tr > td:nth-child(4) {
+		width : 35%;
+		border-left : 1px solid #ddd;
+	}
+
+	& tr:last-child td {
+		border-bottom : 1px solid #ddd;
+	}
+}

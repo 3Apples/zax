@@ -1,0 +1,85 @@
+{
+  "name": "gentelella",
+  "version": "1.4.0",
+  "description": "Gentelella Admin is a free to use Bootstrap admin template",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "build-dev": "webpack --mode development --watch --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/puikinsh/gentelella.git"
+  },
+  "keywords": [
+    "css",
+    "js",
+    "html",
+    "template",
+    "admin",
+    "bootstrap",
+    "theme",
+    "backend",
+    "responsive"
+  ],
+  "author": "Aigars Silkalns",
+  "contributors": [
+    "Christian Esperar"
+  ],
+  "license": "MIT",
+  "main": "build/js/custom.min.js",
+  "bugs": {
+    "url": "https://github.com/puikinsh/gentelella/issues"
+  },
+  "homepage": "https://github.com/puikinsh/gentelella#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "browser-sync": "^2.23.6",
+    "clean-webpack-plugin": "^0.1.19",
+    "compression-webpack-plugin": "^1.1.11",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-uglify": "^1.5.4",
+    "less-loader": "^4.1.0",
+    "raw-loader": "^0.5.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.7.0",
+    "webpack-bundle-analyzer": "^2.11.1",
+    "webpack-cli": "^2.1.2"
+  },
+  "dependencies": {
+    "datatables.net": "^1.10.16",
+    "datatables.net-dt": "^1.10.16",
+    "easy-pie-chart": "^2.1.7",
+    "fullcalendar-reactwrapper": "^1.0.7",
+    "imports-loader": "^0.8.0",
+    "izimodal": "^1.5.1",
+    "jsonview": "^1.2.0",
+    "less": "^3.0.4",
+    "moment": "^2.22.1",
+    "moment-range": "^3.1.1",
+    "node-sass": "^4.9.0",
+    "pretty-checkbox": "^3.0.3",
+    "pug-as-jsx-loader": "^1.0.39",
+    "react-bootstrap": "^0.32.1",
+    "react-breadcrumbs": "^2.1.4",
+    "react-daterange-picker": "^2.0.0-rc.1",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-select": "^1.2.1",
+    "react-simple-range": "^1.6.0",
+    "react-table": "^6.8.2",
+    "sass-loader": "^7.0.1"
+  }
+}

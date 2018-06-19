@@ -1,0 +1,93 @@
+#class-detail-modal(style="display:none;")
+  .modal-inner
+    ul.nav.nav-tabs(role="tablist")
+      li.active
+        a(href="#info" role="tab" data-toggle="tab") Information
+      li
+        a(href="#audit" role="tab" data-toggle="tab") Events
+
+    //
+    // Tab containing main information of the class
+    //
+    .tab-content.search-tabs-content
+      .tab-pane.active(id="info")
+        .row
+          .col-md-12
+            h3.text-center "
+              span.title
+              span "
+        .row
+          .col-md-12
+            table#table-class-details.table.table-condensed.table-striped
+              tr
+                td Created by &nbsp
+                td 
+                  b.creator
+                td State &nbsp
+                td 
+                  b.state
+              tr
+                td Start Time &nbsp
+                td(colspan=3)
+                  b.actual-start-time
+              tr
+                td Created @ &nbsp
+                td(colspan=3)  
+                  b.creation-time
+              tr
+                td Duration &nbsp
+                td 
+                  b.duration
+                td Elapsed &nbsp
+                td 
+                  b.elapsed
+              tr
+                td Created via &nbsp
+                td(colspan=3)
+                  b.created-via
+              tr
+                td Url &nbsp
+                td.class-url(colspan=3) 
+                  span.fa.fa-spinner.fa-spin
+        .row
+          .col-md-12(style="display: flex; justify-content: center")
+            a#join.join.disabled.btn.btn-default.col-xs-5(style="font-size:28px; color:white", target="_blank")
+              span.fa.fa-coffee
+              span &nbsp
+              span Join Class
+            button#delete-class.btn.btn-danger.col-xs-5(style="font-size:28px")
+              span.fa.fa-times
+              span &nbsp
+              span Delete Class
+        .row
+          #delete-msg.col-md-12.text-center.text-success(style="display:none")
+            span Deleted !
+          #delete-err-msg.col-md-12.text-center.text-danger(style="display:none")
+            span 
+        .separator
+        .row
+          .col-md-12
+            h4 Raw Class Details
+            #class-json
+
+      //
+      // Tab containing audit lines
+      //
+      .tab-pane(id="audit")
+        .row
+          .col-md-12
+            h3.text-center Events Audit Trail
+        .row
+          .col-md-12.text-center
+            p#audit-loader.fa.fa-spinner.fa-spin
+            p#audit-load-err.text-danger(style="display:none")
+        .row
+          .col-md-12
+            table.table.table-condensed.table-striped
+              thead
+                tr
+                  th Time
+                  th Event
+                  th Event Info
+              tbody
+

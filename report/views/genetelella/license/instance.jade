@@ -1,0 +1,22 @@
+extends ../layout.jade
+
+block styles
+  link(type="text/css", rel="stylesheet", href="/vc-admin/gene/dist/css/license-instance.css")
+
+block main
+  .row
+    .col-md-12.col-sm-12.col-xs-12
+      .x_panel.tile(style="overflow:visible")
+        .x_title
+          h2.fa.fa-certificate(style="font-size: 30px; margin-right: 16px;")
+          h2 License Instances
+          .clearfix
+        .x_content
+          .widget_summary
+            span This page deals with all things related to License Instances (Templates).
+
+      #main
+  br
+
+block scripts
+  script(src='/vc-admin/gene/dist/license-instance-bundle.js' type='text/javascript')
